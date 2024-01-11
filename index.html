@@ -41,17 +41,39 @@
 
 
 <script>
-setInterval(displayHello, 600);
+setInterval(displayHello, 30000);
 
 function displayHello() {
     idQuote = new Array()
-    idQuote [1] = "First paragraph text"
-    idQuote [2] = "Second paragraph text"
-    idQuote [3] = "Third paragraph text"
-    idQuote [4] = "Fourth paragraph text"
-    idQuote [5] = "Fifth paragraph text"
+    idQuote [1] = "Seperation of Tasks"
+    idQuote [2] = "Don't Crave Regocnition"
+    idQuote [3] = "Ego Minimization"
+    idQuote [4] = "Don't Compare Success"
+    idQuote [5] = "Be In The Moment"
+    idQuote [5] = "Enjoy The Moment"
+    idQuote [6] = "Love Yourself"
+    idQuote [7] = "Will Worrying Change the Outcome"
+    idQuote [8] = "Ist das worüber du dir Sorgen machst die Wahrheit?"
+    idQuote [9] = "Stärke dein Urteilsvermögen"
+    idQuote [10] = "Was sind deine Absichten? Sind sie klar?"
+    idQuote [11] = "Alles hat eine zweite Interpretationsebene, nutze deinen Verstand"
+    idQuote [12] = "Zirkel der Macht : Wille, Verstand, Entscheidung"
+    idQuote [13] = "Tue nie etwas aus Gewohnheit, frage dich ob das nötig ist"
+    idQuote [14] = "Akzeptiere die Vergangenheit"
+    idQuote [15] = "Äußere Dinge lösen keine inneren Konflikte"
+    idQuote [16] = "Je mehr du dir wünscht desto mehr musst du tun. Fokussiere dich auf das Wichtige"
+    idQuote [17] = "Einfach machen ohne viel Nachdenken!"
+    idQuote [18] = "Stoizismus lindert deine Verletzlichkeit in der modernen Welt"
+    idQuote [19] = "Angst ist eine selbsterfüllende Prophezeiung"
+    idQuote [20] = "Geh deinen Weg und hab die Kraft für die Konflikte"
+    idQuote [21] = "Wut ist ein schlechter Antrieb, es ist selbstzerstörend"
+    idQuote [22] = "Jede Wut lässt dich ein Stück Leben verlieren"
+    idQuote [23] = "Aus einer Verlockung folgt immer eine langwierige Strafe"
+    idQuote [24] = "Erst denken, dann handeln"
+    idQuote [25] = "Was willst du wirklich?"
 
-    randomIndex = Math.floor(Math.random()*5);
+
+    randomIndex = Math.floor(Math.random()*25);
     document.getElementById("quote").innerHTML = idQuote[randomIndex + 1]; 
 }
 </script>
