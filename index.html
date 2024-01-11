@@ -1,16 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
-<body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-<p id="quote"></p>
+    <style>
+        body{
+            background-color: black;
+        }
+        p{
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+        }   
+
+        #quoteContainer{
+            margin: auto;
+            width: 60%;
+            padding: 10px;
+        }
+
+        .container{
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="quoteContainer">
+            <p id="quote"></p>
+        </div>
+    </div>
+
 
 <script>
-setInterval(displayHello, 2000);
+setInterval(displayHello, 600);
 
 function displayHello() {
     idQuote = new Array()
