@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+<body>
+
+<p id="quote"></p>
+
+<script>
+setInterval(displayHello, 2000);
+
+function displayHello() {
+    idQuote = new Array()
+    idQuote [1] = "First paragraph text"
+    idQuote [2] = "Second paragraph text"
+    idQuote [3] = "Third paragraph text"
+    idQuote [4] = "Fourth paragraph text"
+    idQuote [5] = "Fifth paragraph text"
+
+    randomIndex = Math.floor(Math.random()*5);
+    document.getElementById("quote").innerHTML = idQuote[randomIndex + 1]; 
+}
+</script>
+
+</body>
+</html>
