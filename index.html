@@ -15,7 +15,7 @@
         p{
             font-family: 'Roboto', sans-serif;
             color: white;
-            font-size: 20px;
+            font-size: 15px;
             text-align: center;
         }   
 
@@ -41,9 +41,12 @@
 
 
 <script>
+displayHello();
 setInterval(displayHello, 30000);
 
 function displayHello() {
+    idQuote_length = 35;
+
     idQuote = new Array()
     idQuote [1] = "Seperation of Tasks"
     idQuote [2] = "Don't Crave Regocnition"
@@ -71,10 +74,31 @@ function displayHello() {
     idQuote [23] = "Aus einer Verlockung folgt immer eine langwierige Strafe"
     idQuote [24] = "Erst denken, dann handeln"
     idQuote [25] = "Was willst du wirklich?"
-
-
-    randomIndex = Math.floor(Math.random()*25);
-    document.getElementById("quote").innerHTML = idQuote[randomIndex + 1]; 
+    idQuote [26] = "Wach auf anstatt dir deinen Albtraum auszumalen"
+    idQuote [27] = "Lass dir nicht von Gefühlen deinen Weg versperren"
+    idQuote [28] = "Der Drang nach mehr ist der Feind deines Glücks"
+    idQuote [29] = "Mach dein Glück nicht abhängig von Ereignissen"
+    idQuote [30] = "Bring es zu Ende"
+    idQuote [31] = "Bleibe standhaft auch wenn du leidest"
+    idQuote [32] = "Mächtige Aufgaben, harte Kämpfe"
+    idQuote [33] = "Du bist bald dran, bleibe geduldig und diszipliniert."
+    idQuote [34] = "Du bist bald dran im Festbankett des Lebens"
+    idQuote [35] = "Harmlose kleine Sünden betrügen Menschen mit großem Herzen"
+    
+    current_quote = document.getElementById("quote").innerHTML
+    if (current_quote == '')
+    {
+        randomIndex = Math.floor(Math.random()*idQuote_length);
+        document.getElementById("quote").innerHTML = idQuote[randomIndex + 1]; 
+    }
+    else{
+        current_quote_id = idQuote.indexOf(current_quote);
+        randomIndex = Math.floor(Math.random()*idQuote_length);
+        while (randomIndex == current_quote_id){
+            randomIndex = Math.floor(Math.random()*idQuote_length);
+        }
+        document.getElementById("quote").innerHTML = idQuote[randomIndex + 1]; 
+    }
 }
 </script>
 
