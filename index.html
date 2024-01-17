@@ -30,12 +30,26 @@
             width: 100vw;
             height: 100vh;
         }
+        .myButton {
+            margin: auto;
+            display: block;
+            background-color:#000000;
+            border-radius:10px;
+            border:1px solid #ffffff;
+            cursor:pointer;
+            color:#ffffff;
+            font-family:Arial;
+            font-size:12px;
+            font-weight:bold;
+            padding:6px 24px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div id="quoteContainer">
             <p id="quote"></p>
+            <button class="myButton" onclick="displayHello()">random</button>
         </div>
     </div>
 
@@ -84,7 +98,17 @@ function displayHello() {
     idQuote [33] = "Du bist bald dran, bleibe geduldig und diszipliniert."
     idQuote [34] = "Du bist bald dran im Festbankett des Lebens"
     idQuote [35] = "Harmlose kleine Sünden betrügen Menschen mit großem Herzen"
-    
+    idQuote [36] = "Es ist der Wert einer Sache, der uns unterwürfig macht"
+    idQuote [36] = "Wenn es außerhalb deiner Macht ist, dann versucht es dich zu kontrollieren"
+    idQuote [36] = "Kontrollierst du deine Gefühle oder Sie dich?"
+    idQuote [36] = "Reden ist leicht, Handeln ist auch leicht - einfach machen"
+    idQuote [36] = "Den Äußeren Umständen sind unsere Gefühle egal"
+    idQuote [36] = "Gib Leuten nicht die Macht Ärger in dir zu provozieren"
+    idQuote [36] = "Leuten sind deine Gefühle völlig egal, warum sollte dich das bekümmern"
+    idQuote [36] = "Warum nimmst du alles so persönlich?"
+    idQuote [36] = "Verstehe, dass die meisten Menschen mit Gefühlen nicht umgehen können"
+    idQuote [36] = "Warum bekümmern dich Menschen, die dich nicht wertschätzen und denen deine Gefühle egal sind"
+
     current_quote = document.getElementById("quote").innerHTML
     if (current_quote == '')
     {
