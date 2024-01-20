@@ -30,9 +30,18 @@
             width: 100vw;
             height: 100vh;
         }
+        .selectorContainer{
+            width: 50%;
+            margin:auto;
+        }
+        .seperationContainer{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
         .myButton {
-            margin: auto;
-            display: block;
+            display: inline-block;
             background-color:#000000;
             border-radius:10px;
             border:1px solid #ffffff;
@@ -43,85 +52,132 @@
             font-weight:bold;
             padding:6px 24px;
         }
+        #book{
+            display: inline-block;
+            background-color:#000000;
+            border-radius:10px;
+            border:1px solid #ffffff;
+            cursor:pointer;
+            color:#ffffff;
+            font-family:Arial;
+            font-size:12px;
+            font-weight:bold;
+            padding:5px 10px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div id="quoteContainer">
             <p id="quote"></p>
-            <button class="myButton" onclick="displayHello()">random</button>
+            <div class="selectorContainer">
+                <div class="seperationContainer">
+                    <button class="myButton" onclick="displayQuotes()">random</button>
+
+                    <label for="book"></label>
+                    <select name="book" id="book">
+                    <option value="stoizismus">Stoizismus</option>
+                    <option value="test">test</option>
+                    </select>
+                </div>
+            </div>
         </div>
     </div>
 
-
 <script>
-displayHello();
-setInterval(displayHello, 30000);
 
-function displayHello() {
-    idQuote_length = 45;
+displayQuotes();
+setInterval(displayQuotes, 15000);
 
-    idQuote = new Array()
-    idQuote [1] = "Seperation of Tasks"
-    idQuote [2] = "Don't Crave Regocnition"
-    idQuote [3] = "Ego Minimization"
-    idQuote [4] = "Don't Compare Success"
-    idQuote [5] = "Be In The Moment"
-    idQuote [5] = "Enjoy The Moment"
-    idQuote [6] = "Love Yourself"
-    idQuote [7] = "Will Worrying Change the Outcome"
-    idQuote [8] = "Ist das worüber du dir Sorgen machst die Wahrheit?"
-    idQuote [9] = "Stärke dein Urteilsvermögen"
-    idQuote [10] = "Was sind deine Absichten? Sind sie klar?"
-    idQuote [11] = "Alles hat eine zweite Interpretationsebene, nutze deinen Verstand"
-    idQuote [12] = "Zirkel der Macht : Wille, Verstand, Entscheidung"
-    idQuote [13] = "Tue nie etwas aus Gewohnheit, frage dich ob das nötig ist"
-    idQuote [14] = "Akzeptiere die Vergangenheit"
-    idQuote [15] = "Äußere Dinge lösen keine inneren Konflikte"
-    idQuote [16] = "Je mehr du dir wünscht desto mehr musst du tun. Fokussiere dich auf das Wichtige"
-    idQuote [17] = "Einfach machen ohne viel Nachdenken!"
-    idQuote [18] = "Stoizismus lindert deine Verletzlichkeit in der modernen Welt"
-    idQuote [19] = "Angst ist eine selbsterfüllende Prophezeiung"
-    idQuote [20] = "Geh deinen Weg und hab die Kraft für die Konflikte"
-    idQuote [21] = "Wut ist ein schlechter Antrieb, es ist selbstzerstörend"
-    idQuote [22] = "Jede Wut lässt dich ein Stück Leben verlieren"
-    idQuote [23] = "Aus einer Verlockung folgt immer eine langwierige Strafe"
-    idQuote [24] = "Erst denken, dann handeln"
-    idQuote [25] = "Was willst du wirklich?"
-    idQuote [26] = "Wach auf anstatt dir deinen Albtraum auszumalen"
-    idQuote [27] = "Lass dir nicht von Gefühlen deinen Weg versperren"
-    idQuote [28] = "Der Drang nach mehr ist der Feind deines Glücks"
-    idQuote [29] = "Mach dein Glück nicht abhängig von Ereignissen"
-    idQuote [30] = "Bring es zu Ende"
-    idQuote [31] = "Bleibe standhaft auch wenn du leidest"
-    idQuote [32] = "Mächtige Aufgaben, harte Kämpfe"
-    idQuote [33] = "Du bist bald dran, bleibe geduldig und diszipliniert."
-    idQuote [34] = "Du bist bald dran im Festbankett des Lebens"
-    idQuote [35] = "Harmlose kleine Sünden betrügen Menschen mit großem Herzen"
-    idQuote [36] = "Es ist der Wert einer Sache, der uns unterwürfig macht"
-    idQuote [37] = "Wenn es außerhalb deiner Macht ist, dann versucht es dich zu kontrollieren"
-    idQuote [38] = "Kontrollierst du deine Gefühle oder Sie dich?"
-    idQuote [39] = "Reden ist leicht, Handeln ist auch leicht - einfach machen"
-    idQuote [40] = "Den Äußeren Umständen sind unsere Gefühle egal"
-    idQuote [41] = "Gib Leuten nicht die Macht Ärger in dir zu provozieren"
-    idQuote [42] = "Leuten sind deine Gefühle völlig egal, warum sollte dich das bekümmern"
-    idQuote [43] = "Warum nimmst du alles so persönlich?"
-    idQuote [44] = "Verstehe, dass die meisten Menschen mit Gefühlen nicht umgehen können"
-    idQuote [45] = "Warum bekümmern dich Menschen, die dich nicht wertschätzen und denen deine Gefühle egal sind"
+function displayQuotes() {
+    idStoizismus = new Array()
+    idStoizismus [0] = "Seperation of Tasks"
+    idStoizismus [1] = "Don't Crave Regocnition"
+    idStoizismus [2] = "Ego Minimization"
+    idStoizismus [3] = "Don't Compare Success"
+    idStoizismus [4] = "Be In The Moment"
+    idStoizismus [5] = "Enjoy The Moment"
+    idStoizismus [6] = "Love Yourself"
+    idStoizismus [7] = "Will Worrying Change the Outcome"
+    idStoizismus [8] = "Ist das worüber du dir Sorgen machst die Wahrheit?"
+    idStoizismus [9] = "Stärke dein Urteilsvermögen"
+    idStoizismus [10] = "Was sind deine Absichten? Sind sie klar?"
+    idStoizismus [11] = "Alles hat eine zweite Interpretationsebene, nutze deinen Verstand"
+    idStoizismus [12] = "Zirkel der Macht : Wille, Verstand, Entscheidung"
+    idStoizismus [13] = "Tue nie etwas aus Gewohnheit, frage dich ob das nötig ist"
+    idStoizismus [14] = "Akzeptiere die Vergangenheit"
+    idStoizismus [15] = "Äußere Dinge lösen keine inneren Konflikte"
+    idStoizismus [16] = "Je mehr du dir wünscht desto mehr musst du tun. Fokussiere dich auf das Wichtige"
+    idStoizismus [17] = "Einfach machen ohne viel Nachdenken!"
+    idStoizismus [18] = "Stoizismus lindert deine Verletzlichkeit in der modernen Welt"
+    idStoizismus [19] = "Angst ist eine selbsterfüllende Prophezeiung"
+    idStoizismus [20] = "Geh deinen Weg und hab die Kraft für die Konflikte"
+    idStoizismus [21] = "Wut ist ein schlechter Antrieb, es ist selbstzerstörend"
+    idStoizismus [22] = "Jede Wut lässt dich ein Stück Leben verlieren"
+    idStoizismus [23] = "Aus einer Verlockung folgt immer eine langwierige Strafe"
+    idStoizismus [24] = "Erst denken, dann handeln"
+    idStoizismus [25] = "Was willst du wirklich?"
+    idStoizismus [26] = "Wach auf anstatt dir deinen Albtraum auszumalen"
+    idStoizismus [27] = "Lass dir nicht von Gefühlen deinen Weg versperren"
+    idStoizismus [28] = "Der Drang nach mehr ist der Feind deines Glücks"
+    idStoizismus [29] = "Mach dein Glück nicht abhängig von Ereignissen"
+    idStoizismus [30] = "Bring es zu Ende"
+    idStoizismus [31] = "Bleibe standhaft auch wenn du leidest"
+    idStoizismus [32] = "Mächtige Aufgaben, harte Kämpfe"
+    idStoizismus [33] = "Du bist bald dran, bleibe geduldig und diszipliniert."
+    idStoizismus [34] = "Du bist bald dran im Festbankett des Lebens"
+    idStoizismus [35] = "Harmlose kleine Sünden betrügen Menschen mit großem Herzen"
+    idStoizismus [36] = "Es ist der Wert einer Sache, der uns unterwürfig macht"
+    idStoizismus [37] = "Wenn es außerhalb deiner Macht ist, dann versucht es dich zu kontrollieren"
+    idStoizismus [38] = "Kontrollierst du deine Gefühle oder Sie dich?"
+    idStoizismus [39] = "Reden ist leicht, Handeln ist auch leicht - einfach machen"
+    idStoizismus [40] = "Den Äußeren Umständen sind unsere Gefühle egal"
+    idStoizismus [41] = "Gib Leuten nicht die Macht Ärger in dir zu provozieren"
+    idStoizismus [42] = "Leuten sind deine Gefühle völlig egal, warum sollte dich das bekümmern"
+    idStoizismus [43] = "Warum nimmst du alles so persönlich?"
+    idStoizismus [44] = "Verstehe, dass die meisten Menschen mit Gefühlen nicht umgehen können"
+    idStoizismus [45] = "Warum bekümmern dich Menschen, die dich nicht wertschätzen und denen deine Gefühle egal sind"
+    idStoizismus [45] = "Das einzige was dich aus der Fassung bringt ist deine Reaktion"
+    idStoizismus [45] = "Schätze selber ein was gut oder schlecht gemeint ist"
+    idStoizismus [45] = "Lass dich nicht von deinen Begierden, Gefühlen und Verbitterung verzehren"
+    idStoizismus [45] = "Jeder hat seine eigenen Vorstellungen und seine eigenen Vorhaben"
+    idStoizismus [45] = "Wann hat dir das letzte Mal, als du die Fassung verloren hast, was genützt"
+    idStoizismus [45] = "Wer die Selbstbeherrschung verliert hat eine unruhige Seele."
+    idStoizismus [45] = "Setze Prioritäten, was ist für dich wichtig gerade?"
+    idStoizismus [45] = "Nimmst du zu viele Bonbons aus dem Glas und kriegst deine Hand nicht mehr raus?"
+    idStoizismus [45] = "Lerne loszulassen"
+    idStoizismus [45] = "Wie viel brauchst du davon und brauchst du das wirklich?"
+    idStoizismus [45] = "Könntest du auch ohne damit leben?"
+    idStoizismus [45] = "Was wird passieren, wenn meine Wünsche und Verlangen nicht eintreten?"
+    idStoizismus [45] = "Unwichtige Dinge zu reduzieren wird dir helfen zu entspannen"
+
+    idTest = new Array();
+    idTest[0] = "Test Broski1";
+    idTest[1] = "Test Broski2";
+
+    selectedBook = document.getElementById('book').value;
+    switch (selectedBook){
+        case 'stoizismus':
+        idQuote =  Array.from(idStoizismus);
+        break;
+        case  'test':
+        idQuote =  Array.from(idTest);
+        break;
+    }
 
     current_quote = document.getElementById("quote").innerHTML
     if (current_quote == '')
     {
-        randomIndex = Math.floor(Math.random()*idQuote_length);
-        document.getElementById("quote").innerHTML = idQuote[randomIndex + 1]; 
+        randomIndex = Math.floor(Math.random()*idQuote.length);
+        document.getElementById("quote").innerHTML = idQuote[randomIndex]; 
     }
     else{
         current_quote_id = idQuote.indexOf(current_quote);
-        randomIndex = Math.floor(Math.random()*idQuote_length);
+        randomIndex = Math.floor(Math.random()*idQuote.length);
         while (randomIndex == current_quote_id){
-            randomIndex = Math.floor(Math.random()*idQuote_length);
+            randomIndex = Math.floor(Math.random()*idQuote.length);
         }
-        document.getElementById("quote").innerHTML = idQuote[randomIndex + 1]; 
+        document.getElementById("quote").innerHTML = idQuote[randomIndex]; 
     }
 }
 </script>
